@@ -56,6 +56,7 @@ Score< 0.5: label-0<br>
 
 ## Track C:
 ### 1) Notebook: dataset_XED_train_trackC.ipynb
+XED dataset was trained on the best model (cardiffnlp/twitter-roberta-large-emotion-latest) to get performance comparison with the original dataset
 
 ### 2) Notebook: dataset_XED_similarity_score.ipynb
 
