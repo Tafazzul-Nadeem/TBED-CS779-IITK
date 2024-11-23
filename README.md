@@ -56,7 +56,7 @@ Score< 0.5: label-0<br>
 
 ## Track C:
 ### 1) Notebook: dataset_XED_train_trackC.ipynb
-XED dataset was trained on the best model (cardiffnlp/twitter-roberta-large-emotion-latest) to get performance comparison with the original dataset
+To assess the compatibility of XED for the purpose of integration, empirical performance comparison is done using trained models.The XED dataset was utilized for fine tuning the best-performing model (cardiffnlp/twitter-roberta-large-emotion-latest)from the original dataset. The model trained achieved comparable accuracy with a F1-score of 0.540793.
 
 ### 2) Notebook: dataset_XED_similarity_score.ipynb
-
+We explored the possibility of data augmentation through the integration of external datasets. The XED dataset annotated using Plutchik’s 8 core emotions iz evaluated for this purpose. The approach involved similarity analysis between datasets. Similarity score between the two datasets is computed to be 0.26, indicating a moderate level of similarity between the two.
