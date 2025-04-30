@@ -63,7 +63,7 @@ We explored the possibility of data augmentation through the integration of exte
 
 # Results for Track A, B, and C
 
-| **Model Name**                                                                 |
+| **Model Name**                                                                | **Track** | **Accuracy** | **Micro F1** | **Macro F1** | **Weighted F1** |
 |-------------------------------------------------------------------------------|-----------|--------------|--------------|--------------|-----------------|
 | SamLowe/roberta-base-go_emotions                                              | A         | 0.21         | 0.45         | 0.44         | 0.42            |
 | cardiffnlp/twitter-roberta-large-emotion-latest                               | A         | 0.29         | 0.54         | 0.53         | 0.50            |
