@@ -36,7 +36,7 @@ We build a **model ensemble** leveraging the complementary strengths of multiple
 This approach emphasizes **parameter efficiency** while achieving competitive results.
 
 ---
-## Track A:
+## Track A Files:
 ### 1) Notebook: twitterRobertaLarge.ipynb
 This notebook shows the code to predict the multiemotion labels of Track A training Dataset without finetuning. The model used was cardiffnlp/twitter-roberta-large-emotion-latest available on huggingface. The model predicts 11 emotions out of which 5 required emotion labels are selected as prediction.
 
@@ -75,7 +75,7 @@ Oversampling Method-1: Selected the class with lowest representation and selecte
 This code trains the last added FC layer along with the Classifier layer (two FC layer at the last) of cardiffnlp/twitter-roberta-large-emotion-latest Classifier layer on balanced obtained by oversampling the minortity class with oversampling. The base model weights was from except Classfier layers.<br>
 Oversampling Method-2: Selected the class with lowest representation and sampled those rows which do not have 1 in the majority label class (like Anger which had 1611 samples). We randomly sampled 100 samples from it and then again checked for lowest class representations and repeated the procedure till we got balanced samples
 
-## Track B:
+## Track B Files:
 ### 1) Notebook: TrackBtrainClassifierHeadtwitterRobertaAddingFCLayer.ipynb
 This notebook shows the code of finetuning the last added FC layer along with the Classifier layer (two FC layer at the last) of cardiffnlp/twitter-roberta-large-emotion-latest Classifier layer. Since the base model prediction was for 11 labels, we have added an FC layer with 5 desired emotion labels and train only this layer freezing the base model.<br>
 Since the base model was trained on dataset with 0/1 labels and ours was an intensity prediction problem, we first converted the intensities into range 0 to 1 with the following rule:<br>
@@ -89,7 +89,7 @@ Score< 0.5: label-0<br>
 0.7 <= Score < 0.8: label-2<br>
 0.8 <= Score <= 1.0: label-3<br>
 
-## Track C:
+## Track C Files:
 ### 1) Notebook: dataset_XED_train_trackC.ipynb
 To assess the compatibility of XED for the purpose of integration, empirical performance comparison is done using trained models.The XED dataset was utilized for fine tuning the best-performing model (cardiffnlp/twitter-roberta-large-emotion-latest)from the original dataset. The model trained achieved comparable accuracy with a F1-score of 0.540793.
 
