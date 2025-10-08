@@ -1,6 +1,8 @@
 # TBED-CS779-IITK
 Text Based Emotion Detection SemEval-2025 Task 11
 
+![Demo](./EmoDet.gif)
+
 ## Track A:
 ### 1) Notebook: twitterRobertaLarge.ipynb
 This notebook shows the code to predict the multiemotion labels of Track A training Dataset without finetuning. The model used was cardiffnlp/twitter-roberta-large-emotion-latest available on huggingface. The model predicts 11 emotions out of which 5 required emotion labels are selected as prediction.
