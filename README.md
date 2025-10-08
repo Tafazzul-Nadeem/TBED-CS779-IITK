@@ -1,8 +1,41 @@
-# TBED-CS779-IITK
-Text Based Emotion Detection SemEval-2025 Task 11
+# 🎭 Multi-Label Emotion Classification — SemEval 2025 Task 11
+This repository contains the code and models for our system submitted to **SemEval-2025 Task 11: Bridging the Gap in Text-Based Emotion**, developed as part of the **Exploration Lab, IIT Kanpur**.
 
 ![Demo](./EmoDet.gif)
 
+
+
+> 📄 [**System Paper**](https://aclanthology.org/2025.semeval-1.243/) (Published in *Exploration Lab IITK @ SemEval-2025 Task 11*)
+
+---
+
+## 🧠 Objective
+
+The goal of this project is to perform **multi-label classification** of perceived emotions from a speaker’s text.  
+The target emotion labels are:
+
+- 😡 **Anger**  
+- 😨 **Fear**  
+- 😄 **Joy**  
+- 😢 **Sadness**  
+- 😲 **Surprise**
+
+Given a textual utterance, the model predicts all applicable emotions simultaneously.
+
+---
+
+## 🧭 Approach
+
+We build a **model ensemble** leveraging the complementary strengths of multiple **pre-trained transformer architectures**:
+
+- 🧱 **RoBERTa** and **DeBERTa** variants  
+- Trained on **diverse emotion datasets**  
+- **Fully fine-tuned** with additional classifier layers for multi-label prediction  
+- **Ensemble strategy** to combine model outputs for robust performance
+
+This approach emphasizes **parameter efficiency** while achieving competitive results.
+
+---
 ## Track A:
 ### 1) Notebook: twitterRobertaLarge.ipynb
 This notebook shows the code to predict the multiemotion labels of Track A training Dataset without finetuning. The model used was cardiffnlp/twitter-roberta-large-emotion-latest available on huggingface. The model predicts 11 emotions out of which 5 required emotion labels are selected as prediction.
